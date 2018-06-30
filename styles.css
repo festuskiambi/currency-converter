@@ -68,10 +68,21 @@ header {
     outline: none;
 }
 
-.select-style input{
+.select-style input {
     width: 85%;
     padding: 8px 8px;
+}
+#btn-convert {
+    background-color: #4CAF50;
+    margin-top: 10px;
 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 600px) {

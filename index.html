@@ -7,6 +7,8 @@
     <title>Currency Converter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+        <script src="app.js"></script>
+
 </head>
 
 <body>
@@ -23,15 +25,16 @@
             <h2>Currency I Have:</h2>
             <select id="curr_from"></select>
             <h2>Amount to convert:</h2>
-            <input class="w3-input" type="text">
+            <input class="w3-input" type="text" id ="from_amount">
+            <button onclick="getSelectedValues()" id="btn-convert">Convert</button>
         </div>
         <div class="select-style" id="currency_to">
             <h2>Currency I want:</h2>
             <select id="curr_to"></select>
             <h2>Amount I will get:</h2>
+            <h1 id="target_amount"></h1>
         </div>
     </main>
-    <script src="app.js"></script>
 </body>
 
 </html>
