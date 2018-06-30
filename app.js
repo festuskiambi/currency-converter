@@ -4,6 +4,16 @@ const currencySelector = document.getElementsByTagName("select");
 window.addEventListener("load", e => {
   getCurrencies();
   document.getElementById("from_amount").value = "1";
+
+  if( 'serviceWorker' in navigator ){
+    try {
+     navigator.serviceWorker.register('sw.js');
+     console.log('service worker registered'); 
+    } catch (error) {
+      console.log('service worker not registered');
+
+    }
+  }
 });
 
 async function getCurrencies() {
@@ -48,9 +58,7 @@ const convertCurrency = (amount, fromCurrency, toCurrency) => {
       if (conrversion_rate_value) {
         const total = conrversion_rate_value * amount;
         const convertedAmount = Math.round(total * 100) / 100;
-        console.log(convertedAmount);
         document.getElementById("target_amount").innerHTML = convertedAmount;
-
       } else {
         const err = new Error(`Value not found for ${query}`);
         console.log(err);
