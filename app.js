@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 const currencySelector = document.getElementsByTagName("select");
+let currency = "";
 
 window.addEventListener("load", e => {
   getCurrencies();
@@ -39,6 +40,7 @@ const getSelectedValues = () => {
   const toSelect = document.getElementsByTagName("select")[1];
   const fromSelectedCurrency = fromSelect.options[fromSelect.selectedIndex].id;
   const toSelectedCurrency = toSelect.options[toSelect.selectedIndex].id;
+  currency = toSelectedCurrency;
   const amount = document.getElementById("from_amount").value;
   convertCurrency(amount, fromSelectedCurrency, toSelectedCurrency);
 };
@@ -58,7 +60,8 @@ const convertCurrency = (amount, fromCurrency, toCurrency) => {
       if (conrversion_rate_value) {
         const total = conrversion_rate_value * amount;
         const convertedAmount = Math.round(total * 100) / 100;
-        document.getElementById("target_amount").innerHTML = convertedAmount;
+        document.getElementById("target_amount").innerHTML =`${currency}: ${convertedAmount}`;
+        console.log(`${currency}: ${convertedAmount}`);
       } else {
         const err = new Error(`Value not found for ${query}`);
         console.log(err);
