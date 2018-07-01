@@ -5,6 +5,13 @@ The app uses [Currency Converter API](https://www.currencyconverterapi.com/) for
 
 Yon can view a live demo of the app [here](https://festuskiambi.github.io/currency-converter/)
 
+## Installation
+Clone this repository & install project dependencies:
+```bash
+$ git clone https://github.com/festuskiambi/currency-converter.git
+$ cd currency-converter
+$ npm install
+
 ## Features
 
   | Feature | Description |
