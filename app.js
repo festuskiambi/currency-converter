@@ -8,21 +8,18 @@ window.addEventListener("load", e => {
   getCurrencies();
   document.getElementById("from_amount").value = "1";
 
-  if ('serviceWorker' in navigator) {
+  if( 'serviceWorker' in navigator ){
     try {
-      navigator.serviceWorker.register('sw.js');
-      console.log('service worker registered');
+     navigator.serviceWorker.register('sw.js');
+     console.log('service worker registered'); 
     } catch (error) {
       console.log('service worker not registered');
 
     }
   }
 });
-
 const dbPromise = idb.open('currency-rate-store', 1, upgradeDB => {
-  upgradeDB.createObjectStore('rates-values', {
-    keyPath: 'id'
-  });
+  upgradeDB.createObjectStore('rates-val',{ keyPath: 'id' });
 });
 
 async function getCurrencies() {
@@ -68,7 +65,7 @@ const convertCurrency = (amount, fromCurrency, toCurrency) => {
       if (conrversion_rate_value) {
         const total = conrversion_rate_value * amount;
         const convertedAmount = Math.round(total * 100) / 100;
-        document.getElementById("target_amount").innerHTML = `${currency}: ${convertedAmount}`;
+        document.getElementById("target_amount").innerHTML =`${currency}: ${convertedAmount}`;
         console.log(`${currency}: ${convertedAmount}`);
       } else {
         const err = new Error(`Value not found for ${query}`);
