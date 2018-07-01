@@ -1,5 +1,5 @@
 # currency-converter
-This is the currency converter client for ` ALC 7DaysofCodeChallenge project-Currency Converter`.
+This is the currency converter client for ` ALC 7DaysofCodeChallenge project`.
 
 The app uses [Currency Converter API](https://www.currencyconverterapi.com/) for fetching live conversion rates.
 
@@ -17,7 +17,7 @@ $ npm install
   | Feature | Description |
   | ------- | ----------- |
   | Convert currencies | Quickly convert currencies using the most current exchange rates |
-  | Offline-first | The app works offline as well as online by storing the most recent used exchange rates |
+  | Offline-first | The app works offline as well as online  |
 
 ## Dependencies
  
