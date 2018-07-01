@@ -11,7 +11,7 @@ Clone this repository & install project dependencies:
 $ git clone https://github.com/festuskiambi/currency-converter.git
 $ cd currency-converter
 $ npm install
-
+```
 ## Features
 
   | Feature | Description |
