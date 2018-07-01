@@ -5,7 +5,16 @@ The app uses [Currency Converter API](https://www.currencyconverterapi.com/)'s c
 
 Yon can view a live demo of the app [here](https://festuskiambi.github.io/currency-converter/)
 
+## Features
 
+  | Feature | Description |
+  | ------- | ----------- |
+  | Convert currencies | Quickly convert currencies using the most current exchange rates |
+  | Offline-first | The app works offline as well as online by storing the most recent used exchange rates |
+
+## Dependencies
+ 
+  - `idb`  
 
 ## Maintainers
 This project is mantained by:
