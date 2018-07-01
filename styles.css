@@ -52,7 +52,7 @@ header {
     -moz-box-shadow: 1px 1px 5px 0px rgba(212, 204, 212, 1);
     box-shadow: 1px 1px 5px 0px rgba(212, 204, 212, 1);
     width: 47%;
-    min-height: 240px;
+    min-height: 265px;
     padding-left: 1%;
     padding-bottom: 3%;
 }
@@ -72,10 +72,10 @@ header {
     width: 85%;
     padding: 8px 8px;
 }
+
 #btn-convert {
     background-color: #4CAF50;
     margin-top: 10px;
-
     border: none;
     color: white;
     padding: 15px 32px;
