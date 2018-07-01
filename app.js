@@ -1,4 +1,6 @@
 /*jshint esversion: 6 */
+import idb from 'idb';
+
 const currencySelector = document.getElementsByTagName("select");
 let currency = "";
 
@@ -15,6 +17,9 @@ window.addEventListener("load", e => {
 
     }
   }
+});
+const dbPromise = idb.open('currency-rate-store', 1, upgradeDB => {
+  upgradeDB.createObjectStore('rates-val',{ keyPath: 'id' });
 });
 
 async function getCurrencies() {
